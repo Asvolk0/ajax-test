@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section{
+    border-top: 1px solid #000;
+}
+
+.displayNone{
+    display: none;
+}
+
+/* loading */
+
+.load{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 150px;
+}
+
+.loadDisplayNone{
+    display: none;
+}
+
+/* feu rouge */
+
+header{
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feu{
+    position: relative;
+    width: 90px;
+    height: 250px;
+    background: #424242;
+    border-radius: 15px;
+}
+
+.couleur{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.vert{
+    background: #095702;
+    top: calc(100% - 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vertOk{
+    background: #19da08;
+}
+
+.rouge{
+    background: #570202;
+    top: calc(0% + 50px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rougeOk{
+    background: #eb0707;
+}
+
+.orange{
+    background: #886003;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orangeOk{
+    background: #eb9b07;
+}
+
+/* clignotement */
+
+.clignotement{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clignotement > p{
+    font-size: 50px;
+    color: deeppink;
+    font-weight: bold;
+}
+
+/* div temporaire */
+
+.sectionDisplayTemp{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionDisplayTemp > div{
+    font-size: 50px;
+    color: #14bcff;
+    font-weight: bold;
+}
+
+/* barre de chargement */
+
+.barreDeChargement{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barreDeChargement > div{
+    width: 1000px;
+    height: 50px;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.socleBarreDeChargement::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    background: violet;
+    animation-name: wesh;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes wesh{
+    form{
+        right: 100%;
+    }
+    to{
+        right: 0;
+    }
+}
+
+/* arc en ciel */
+
+.arcEnCiel{
+    width: 100%;
+    height: 50vh;
+}
+
