@@ -28,3 +28,9 @@ let eleves = [
 console.log(eleves);
 let strJSON = JSON.stringify(eleves);
 console.log(strJSON);
+
+let varJSON = JSON.parse(strJSON);
+
+varJSON.forEach(function (classe){
+    console.log(classe.age);
+});
